@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scratch Paper</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .settings-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 5px; /* Adjust spacing around the gear */
+        }
+        .settings-icon {
+            cursor: pointer;
+            width: 16px; /* Size of the gear icon */
+            height: 16px; /* Size of the gear icon */
+            margin-right: 5px; /* Space between the gear and the text, if needed */
+        }
+        .title-container {
+            padding: 10px; /* Space around the title input */
+        }
+        .title-input {
+            border: none;
+            border-bottom: 1px solid #000; /* Underline */
+            font-size: 18px; /* Font size for the title */
+            width: 100%;
+            text-align: center; /* Center the text */
+            outline: none; /* Remove default outline */
+        }
+        .container {
+            width: 300px;
+            height: 300px; /* Adjust height as needed */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0;
+            padding-top: 30px; /* Padding to push the textarea down */
+        }
+        textarea {
+            width: 90%;
+            height: 90%;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .note-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+        .pageAdd-icon {
+            cursor: pointer;
+            width: 16px;
+            height: 16px;
+            margin-left: 10px;
+        }
+        .note-squares {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        .note-square {
+            width: 80px;
+            height: 80px;
+            border: 1px solid #000;
+            margin: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .note-square.active {
+            background-color: #add8e6; /* Highlight color */
+            border: 2px solid #0000ff; /* Darker border for active note */
+        }
+        .delete-page {
+            color: red;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="settings-container">
+        <img src="gear.png" alt="Settings" class="settings-icon" id="settingsIcon">
+        <span>Settings</span> <!-- Optional text label next to the gear -->
+    </div>
+    <div class="title-container">
+        <input type="text" class="title-input" id="titleInput" value="Untitled Page" />
+    </div>
+    <div class="container">
+        <textarea id="scratchPad" placeholder="Write your notes here..."></textarea>
+    </div>
+    <div class="note-controls">
+        <div>
+            <img src="pageAdd.png" alt="Add Page" class="pageAdd-icon" id="pageAddIcon" title="Add Page">
+            <span>Add Page</span>
+        </div>
+        <div class="delete-page" id="deletePage">- Delete Page</div>
+    </div>
+    <div class="note-squares" id="noteSquares">
+        <!-- Note squares will be dynamically populated here -->
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

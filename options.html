@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scratch Paper Settings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Settings</h1>
+    
+    <label for="defaultTitle">Default Title:</label>
+    <input type="text" id="defaultTitle" placeholder="Enter default title" />
+
+    <label for="defaultFont">Default Font:</label>
+    <select id="defaultFont">
+        <option value="Arial">Arial</option>
+        <option value="Courier New">Courier New</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Verdana">Verdana</option>
+    </select>
+
+    <label for="pageColor">Page Color:</label>
+    <input type="color" id="pageColor" />
+
+    <button id="saveSettings">Save Settings</button>
+
+    <script src="options.js"></script>
+</body>
+</html>
